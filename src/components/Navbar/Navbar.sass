@@ -1,0 +1,23 @@
+@import '../../sass/colors'
+@import '../../sass/mixins'
+
+.navbar
+    @include hstack
+    background-color: $black
+    border-bottom: 4px solid $secondary
+    justify-content: space-between
+    align-items: center
+    padding: 13px 24px 14px 24px
+
+.logo
+    width: 50px
+    height: 53px
+
+.euro4-logo
+    width: 120px
+    height: 48px
+
+.right-navbar-items
+    @include hstack
+    align-items: center
+    gap: 40px

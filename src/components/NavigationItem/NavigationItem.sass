@@ -1,0 +1,19 @@
+@import '../../sass/mixins'
+@import '../../sass/colors'
+
+.navigation-item
+    @include hstack
+    align-items: center
+    color: $white
+    cursor: pointer
+    &:hover
+        color: $primary
+    &:not(&:last-child)
+        margin-right: 45px
+    p
+        font-family: 'mmc'
+        font-weight: 700
+        font-size: 16px
+        line-height: 25.6px
+    svg
+        padding-left: 11px

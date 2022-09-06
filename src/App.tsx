@@ -1,4 +1,5 @@
 import Router from './router'
+import './App.sass'
 
 function App() {
 
