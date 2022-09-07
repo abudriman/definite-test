@@ -1,0 +1,86 @@
+@import '../../sass/mixins'
+@import '../../sass/colors'
+@import '../../sass/breakpoints'
+
+.dealer-finder
+    @include vstack
+    gap: 65px
+    padding: 110px 90px 100px
+    .row
+        @include vstack
+        align-items: stretch
+        p
+            font-family: 'MMC'
+    .title-description
+        align-items: center
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 25.6px
+            color: $black
+            max-width: 530px
+            text-align: center
+        & > p
+            font-weight: 800
+            font-size: 48px
+            min-width: 300px
+            margin-bottom: 30px
+    .location-dropdown
+        @include vstack
+        cursor: text
+        label:
+            cursor: text
+        p
+            font-weight: 500
+            font-size: 20px
+            line-height: 32px
+            color: $gray
+        .input-dropdown
+            @include hstack
+            padding: 21px
+            border: 1px solid $gray
+            &:focus-within
+                padding: 20px
+                border: 2px solid $accent
+            input
+                flex: 1
+                border: none
+                &:focus
+                    border: none
+                    outline: none
+                &::placeholder
+                    font-family: 'MMC'
+                    font-size: 16px
+                    line-height: 19.2px
+                    font-weight: 600
+                    color: $darkGray
+            .search-icon
+                padding-right: 10px
+
+@media screen and (min-width: $lg)
+    .dealer-finder
+        align-items: stretch
+        padding: 110px 50px 100px
+        .row
+            @include hstack
+        .title-description
+            align-items: center
+            justify-content: space-between
+            p
+                text-align: left
+            &>p
+                margin-bottom: 0px
+
+@media screen and (min-width: $xxl)
+    .dealer-finder
+        padding: 110px 100px 100px
+    .row
+        &:not(&:last-child)
+            padding: 0px 70px
+
+@media screen and (min-width: $xxxl)
+    .dealer-finder
+        padding: 110px 200px 100px
+    .row
+        &:not(&:last-child)
+            padding: 0px 90px

@@ -1,0 +1,29 @@
+@import '../../sass/mixins'
+$card: #f1f1f1
+
+.dealer-card
+    @include hstack
+    gap: 23px
+    flex: 100%
+    padding: 24px
+    background-color: $card
+    border-radius: 20px
+
+.pin-icon
+    img
+        max-width: 70px
+.card-description
+    @include vstack
+    &>p
+        &:first-child
+            font-weight: 700
+            font-size: 20px
+            line-height: 32px
+            text-transform: capitalize
+
+.card-services
+    @include hstack
+    align-items: center
+    margin: 42px 0 20px 0
+.service-separator
+    margin: 0 10px

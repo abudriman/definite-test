@@ -1,5 +1,10 @@
 @import '../../sass/colors'
 @import '../../sass/mixins'
+@import '../../sass/breakpoints'
 
 .navigation
-    @include hstack
+    display: none
+
+@media screen and (min-width: $lg)
+    .navigation
+        @include hstack
