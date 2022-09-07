@@ -1,18 +1,21 @@
 import create from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
-import { GlobalStateModel, createGlobalStateSlice } from './GlobalState'
+import { StoreState } from '../interfaces'
+import {createGlobalStateSlice } from './GlobalState'
+import { createGeolocationSlice } from './LocationState'
 
 // union for each slice
-export type StoreState = GlobalStateModel 
+
 
 export const useStore = create<StoreState>()(
   devtools(
     persist(
       (...a) => ({
         ...createGlobalStateSlice(...a),
+        ...createGeolocationSlice(...a),
       }),
       {
-        name: 'react-dashboard-store',
+        name: 'definite-test-store',
       }
     )
   )
