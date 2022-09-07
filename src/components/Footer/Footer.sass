@@ -1,0 +1,32 @@
+@import '../../sass/mixins'
+@import '../../sass/colors'
+
+.footer
+    @include vstack
+    align-items: center
+    padding: 90px 0 112px
+    gap: 40px
+    p
+        font-family: 'MMC'
+        &:nth-child(2)
+            font-weight: 700
+            font-size: 14px
+            line-height: 160%
+            color: $darkGray
+        &:nth-child(4)
+            font-weight: 400
+            font-size: 16px
+            line-height: 160%
+        &:nth-child(6)
+            font-weight: 500
+            font-size: 14px
+            line-height: 160%
+            text-align: center
+.footer-media
+    @include hstack
+    gap: 32px
+
+.divider
+    width: 80px
+    border-bottom: 3px solid $accent
+    border-radius: 20px
