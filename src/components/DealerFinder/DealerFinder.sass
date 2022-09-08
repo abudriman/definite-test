@@ -37,6 +37,7 @@
             color: $gray
         .input-dropdown
             @include hstack
+            position: relative
             padding: 21px
             border: 1px solid $gray
             &:focus-within
@@ -84,3 +85,31 @@
     .row
         &:not(&:last-child)
             padding: 0px 90px
+
+#suggestion
+    position: absolute
+    z-index: 3
+    top: 110%
+    left: 0
+    width: 100%
+
+    .suggestion-item
+        @include hstack
+        align-items: center
+        padding: 14px
+        cursor: pointer
+        background: $white
+        p
+            padding-left: 10px
+            font-size: 18px
+            color: $black
+        &:nth-child(odd)
+            background-color: #E1E1E1
+
+.arrow-icon
+    position: absolute
+    right: 0
+    top: 0
+    padding: 21px
+    cursor: pointer
+    z-index: 3

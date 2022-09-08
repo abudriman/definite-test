@@ -3,6 +3,7 @@ $card: #f1f1f1
 
 .dealer-card
     @include hstack
+    cursor: pointer
     gap: 23px
     flex: 100%
     padding: 24px
@@ -27,3 +28,5 @@ $card: #f1f1f1
     margin: 42px 0 20px 0
 .service-separator
     margin: 0 10px
+    &:last-child
+        display: none

@@ -6,6 +6,9 @@ export const createGlobalStateSlice: StateCreator<StoreState,
     [['zustand/devtools', unknown], ['zustand/persist', unknown]],
   [],
   GlobalStateModel> = (set) => ({
-    showSidebar: true,
-    toggleSidebar: () => set((state) => ({ showSidebar: state.showSidebar })),
+    showModal: true,
+    selectedId: -1,
+    toggleModal: () => set((state) => ({ showModal: !state.showModal })),
+    setSelectedId: (payload:number) => set((state) => ({ selectedId: payload })),
+
   })
